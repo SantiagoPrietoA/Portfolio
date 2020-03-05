@@ -1,0 +1,21 @@
+{
+  "name": "Santiago-Prieto",
+  "version": "1.0.0",
+  "description": "Santiago Prieto profesional portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "Santiago Prieto"
+  ],
+  "author": "Santiago Prieto",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
