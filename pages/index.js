@@ -12,6 +12,7 @@ const index = () => (
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossOrigin="anonymous"
       />
+      <link rel="shortcut icon" href="/static/favicon.ico" />
       <title>Santiago Prieto</title>
     </Head>
     <ProfileContent></ProfileContent>
@@ -21,9 +22,6 @@ const index = () => (
       body,
       div,
       span,
-      applet,
-      object,
-      iframe,
       h1,
       h2,
       h3,
@@ -111,11 +109,9 @@ const index = () => (
         background-color: #000f17;
         font-family: "Roboto";
       }
-
       :global(.section) {
         min-height: 100vh;
       }
-
       :global(.title) {
         font-size: 2.5rem;
         text-align: center;

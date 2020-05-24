@@ -2,8 +2,8 @@ import GoWebButton from "./GoWebButton.jsx";
 
 const ProjectCard = ({ active, onClose, project }) => {
   return (
-    <div id="main" className={`main${active}`}>
-      <article id="intro" className={active}>
+    <div className={`mainContent main${active}`}>
+      <article className={active}>
         <h1>{project.name}</h1>
         <span className="image main">
           <img src={project.cover} alt="project image" />
@@ -24,14 +24,14 @@ const ProjectCard = ({ active, onClose, project }) => {
 
         <GoWebButton url={project.websiteUrl}></GoWebButton>
 
-        <button className="close" onClick={onClose}></button>
+        <button className="close" onClick={onClose} aria-label="close"></button>
       </article>
 
       <style jsx>{`
         ::-webkit-scrollbar {
           display: none;
         }
-        #main {
+        .mainContent {
           flex-grow: 1;
           flex-shrink: 1;
           display: flex;
@@ -44,29 +44,29 @@ const ProjectCard = ({ active, onClose, project }) => {
           font-size: 16px;
         }
 
-        #main h1 {
+        .mainContent h1 {
           font-size: 2em;
           color: white;
           text-align: center;
         }
 
-        #main h2 {
+        .mainContent h2 {
           font-size: 1.5em;
           color: white;
           text-align: center;
         }
 
-        #main p {
+        .mainContent p {
           font-size: 1em;
           color: #a9a9a9;
           margin-bottom: 0.5em;
         }
 
-        #main.mainactive {
+        .mainContent.mainactive {
           z-index: 3;
         }
 
-        #main article {
+        .mainContent article {
           transform: translateY(0.25rem);
           transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
           padding: 4.5rem 2.5rem 1.5rem 2.5rem;
@@ -79,13 +79,13 @@ const ProjectCard = ({ active, onClose, project }) => {
           overflow-y: scroll;
         }
 
-        #main article .imagesContainer {
+        .mainContent article .imagesContainer {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
         }
 
-        #main article .imagesContainer img {
+        .mainContent article .imagesContainer img {
           width: auto;
           height: 200px;
           margin-top: 1em;
@@ -103,12 +103,12 @@ const ProjectCard = ({ active, onClose, project }) => {
           text-align: center;
         }
 
-        #main article.active {
+        .mainContent article.active {
           transform: translateY(0);
           opacity: 1;
         }
 
-        #main article .close {
+        .mainContent article .close {
           display: block;
           position: absolute;
           top: 0;
@@ -121,7 +121,7 @@ const ProjectCard = ({ active, onClose, project }) => {
           white-space: nowrap;
         }
 
-        #main article .close:before {
+        .mainContent article .close:before {
           transition: background-color 0.2s ease-in-out;
           content: "";
           display: block;
@@ -137,27 +137,27 @@ const ProjectCard = ({ active, onClose, project }) => {
           background-repeat: no-repeat;
         }
 
-        #main article .close:hover:before {
+        .mainContent article .close:hover:before {
           background-color: rgba(255, 255, 255, 0.075);
         }
 
-        #main article .close:active:before {
+        .mainContent article .close:active:before {
           background-color: rgba(255, 255, 255, 0.175);
         }
 
         @media screen and (max-width: 768px) {
-          #main article {
+          .mainContent article {
             width: auto;
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
           }
-          #main article {
+          .mainContent article {
             padding: 3.5rem 2rem 0.5rem 2rem;
           }
 
-          #main article .close:before {
+          .mainContent article .close:before {
             top: 0.875rem;
             left: 0.875rem;
             width: 2.25rem;
@@ -167,7 +167,7 @@ const ProjectCard = ({ active, onClose, project }) => {
         }
 
         @media screen and (max-width: 480px) {
-          #main article {
+          .mainContent article {
             padding: 3rem 1.5rem 0.5rem 1.5rem;
           }
 
@@ -178,7 +178,7 @@ const ProjectCard = ({ active, onClose, project }) => {
         
         
 
-        #main article .imagesContainer img {
+        .mainContent article .imagesContainer img {
           width: 80%;
           height: auto;
         }

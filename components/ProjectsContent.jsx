@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const ProjectsContent = ({ aricleVisisble, isVisible, aricleProject }) => {
-  const handlerAricleClick = aricle => {
+  const handlerAricleClick = (aricle) => {
     aricleProject(aricle);
     aricleVisisble();
   };
 
   return (
-    <header id="header" className={`header ${isVisible}`}>
+    <header className={`header ${isVisible}`}>
       <h1 className="title">PROJECTS</h1>
       <div className="content">
         <div className="inner">
@@ -22,16 +22,18 @@ const ProjectsContent = ({ aricleVisisble, isVisible, aricleProject }) => {
       <nav>
         <ul>
           <li>
-            <button onClick={e => handlerAricleClick("tery")}>TeryBit</button>
+            <button onClick={(e) => handlerAricleClick("tery")}>TeryBit</button>
           </li>
           <li>
-            <button onClick={e => handlerAricleClick("izi")}>IZI</button>
+            <button onClick={(e) => handlerAricleClick("izi")}>IZI</button>
           </li>
           <li>
-            <button onClick={e => handlerAricleClick("pet")}>Petgram</button>
+            <button onClick={(e) => handlerAricleClick("pet")}>Petgram</button>
           </li>
           <li>
-            <button onClick={e => handlerAricleClick("spoty")}>SpotiApp</button>
+            <button onClick={(e) => handlerAricleClick("spoty")}>
+              SpotiApp
+            </button>
           </li>
         </ul>
       </nav>

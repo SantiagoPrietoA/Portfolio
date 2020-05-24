@@ -1,5 +1,5 @@
 const GoWebButton = ({ url }) => (
-  <div id="container">
+  <div>
     <a href={url} target="_blank" className="learn-more">
       <span className="circle" aria-hidden="true">
         <span className="icon arrow"></span>

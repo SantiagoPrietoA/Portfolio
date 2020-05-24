@@ -5,18 +5,18 @@ const SectionAbout = () => {
     {
       title: "Will you wonder who I am?",
       message:
-        "Definitely the best question, the answer?, my name is Santiago and I am a systems engineer graduated from the technological university of Pereira"
+        "Definitely the best question, the answer?, my name is Santiago and I am a systems engineer graduated at Universidad Tecnologica de Pereira",
     },
     {
       title: "Never stop learning",
       message:
-        "That is my philosophy. There is always something to learn and I always want to do it"
+        "That is my philosophy. There is always something to learn and I always want to do it",
     },
     {
       title: "Something is not right here",
       message:
-        "How did a music lover end up writing lines of code instead of playing his guitar all day? It's complicated but I like it and that's what matters"
-    }
+        "How did a music lover end up writing lines of code instead of playing his guitar all day? It's complicated but I like it and that's what matters",
+    },
   ];
 
   const renderCards = () => {
